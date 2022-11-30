@@ -1,0 +1,19 @@
+python3 monodevsnet_trainer.py --png --use_dc --use_le --use_ms --version <an_extension_to_model_name> \
+    --models_fcn_name encoder <HRNet/ResNet/DenseNet> --num_layers <model_extension_num> \
+    --real_dataset kitti --syn_dataset <vk_1.0/vk_2.0> --real_data_path <path_to_real_dataset_folder> --syn_data_path <path_to_synthetic_dataset_folder>
+
+
+
+python monodevsnet_trainer.py \
+        --use_dc --use_le --use_ms \
+        --cuda_idx 0 \
+        --num_workers 8 \
+        --num_epochs 2 \
+        --batch_size 4 \
+        --height 192 \
+        --width 640 \
+        --max_depth 80 \
+        --version movodevsnet_vk2_640x192 \
+        --real_dataset kitti --syn_dataset vk_2.0 \
+        --real_data_path /media/aiteam/DataAI/depth_datasets/kitti_precompute_depth_monodepth2 \
+        --syn_data_path /media/aiteam/DataAI/depth_datasets
